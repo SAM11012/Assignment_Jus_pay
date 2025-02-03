@@ -48,6 +48,13 @@ Make sure you have the following installed on your machine:
    http://localhost:5173/
    ```
    The application should now be running locally.
+6. **Watch the App Live**
+
+   Open your browser and go to:
+   ```
+   https://samyak-juspay-assignment.netlify.app/
+   ```
+   The application is hosted on Netlify.
 
 ## Additional Notes
 
