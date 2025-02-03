@@ -1,9 +1,13 @@
 import "./App.css";
 import HomePage from "./components/HomePage/HomePage";
+import { ThemeProvider } from "./thmeContext";
+import './index.css'
 function App() {
   return (
     <>
-      <HomePage />
+      <ThemeProvider>
+        <HomePage />
+      </ThemeProvider>
     </>
   );
 }

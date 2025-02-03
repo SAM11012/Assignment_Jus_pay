@@ -3,18 +3,17 @@
   flex-direction: column;
   padding: 0;
   border: none;
-  width: 180px;
+  width: 100%;
   /* Adjust width as needed */
 }
 
 .menu-item {
-  
+  padding: 4px 8px;
   display: flex;
   gap: 5px;
   align-items: center;
   height: 35px;
-  padding: 5px 1px;
-  color: #1c1c1c;
+  color: var(--slider-menu-item-color);
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -32,10 +31,24 @@
 }
 
 .sub-heading {
-  color: #1c1c1c66;
+  color: var(--slider-subHeading-color);
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 8px;
+}
+.menu-label {
+  color: var(--slider-menu-item-color);
+}
+
+.ant-input::placeholder {
+  color: var(--input-placeholder-color) !important;
+  opacity: 1;
+}
+
+.sub-heading-n {
+  color: var(--slider-subHeading-n-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
 }
 

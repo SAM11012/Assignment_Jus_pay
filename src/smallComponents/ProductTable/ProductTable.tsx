@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const products = [
   {
@@ -35,53 +35,123 @@ const products = [
 
 const ProductTable = () => {
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-sm">
-        <div className="p-6">
-          <h1 className="text-2xl font-semibold text-gray-900 mb-6">
-            Top Selling Products
-          </h1>
+    <div
+      className="p-6 flex flex-col gap-4 "
+      style={{ borderRadius: "16px", width: "100%",backgroundColor: "var(--content-bg-color)" }}
+    >
+      <h1
+        className=""
+        style={{
+          fontWeight: 600,
+          fontSize: "14px",
+          lineHeight: "20px",
+          color:'var(--conter-title-text)'
+        }}
+      >
+        Top Selling Products
+      </h1>
 
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="text-left py-3 px-4 text-gray-400 font-normal">
-                    Name
-                  </th>
-                  <th className="text-left py-3 px-4 text-gray-400 font-normal">
-                    Price
-                  </th>
-                  <th className="text-left py-3 px-4 text-gray-400 font-normal">
-                    Quantity
-                  </th>
-                  <th className="text-left py-3 px-4 text-gray-400 font-normal">
-                    Amount
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {products.map((product, index) => (
-                  <tr
-                    key={index}
-                    className="border-b border-gray-100 last:border-b-0"
-                  >
-                    <td className="py-4 px-4 text-gray-900">{product.name}</td>
-                    <td className="py-4 px-4 text-gray-900">
-                      ${product.price.toFixed(2)}
-                    </td>
-                    <td className="py-4 px-4 text-gray-900">
-                      {product.quantity}
-                    </td>
-                    <td className="py-4 px-4 text-gray-900">
-                      ${product.amount.toFixed(2)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <div className="overflow-x-auto">
+        <table className="w-full">
+          <thead>
+            <tr className="border-b" style={{borderColor: 'var(--mini-table-header-border)'}}>
+              <th
+                className="text-left py-3 px-4"
+                style={{
+                  fontWeight: 400,
+                  fontSize: "12px",
+                  lineHeight: "18px",
+                  color: "var(--mini-table-head-text)",
+                }}
+              >
+                Name
+              </th>
+              <th
+                className="text-left py-3 px-4"
+                style={{
+                  fontWeight: 400,
+                  fontSize: "12px",
+                  lineHeight: "18px",
+                  color: "var(--mini-table-head-text)",
+                }}
+              >
+                Price
+              </th>
+              <th
+                className="text-left py-3 px-4"
+                style={{
+                  fontWeight: 400,
+                  fontSize: "12px",
+                  lineHeight: "18px",
+                  color: "var(--mini-table-head-text)",
+                }}
+              >
+                Quantity
+              </th>
+              <th
+                className="text-left py-3 px-4"
+                style={{
+                  fontWeight: 400,
+                  fontSize: "12px",
+                  lineHeight: "18px",
+                  color: "var(--mini-table-head-text)",
+                }}
+              >
+                Amount
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((product, index) => (
+              <tr key={index} className=" last:border-b-0">
+                <td
+                  className="py-4 px-4"
+                  style={{
+                    fontWeight: 400,
+                    fontSize: "12px",
+                    lineHeight: "18px",
+                    color: "var(--mini-table-body-text)",
+                  }}
+                >
+                  {product.name}
+                </td>
+                <td
+                  className="py-4 px-4"
+                  style={{
+                    fontWeight: 400,
+                    fontSize: "12px",
+                    lineHeight: "18px",
+                    color: "var(--mini-table-body-text)",
+                  }}
+                >
+                  ${product.price.toFixed(2)}
+                </td>
+                <td
+                  className="py-4 px-4"
+                  style={{
+                    fontWeight: 400,
+                    fontSize: "12px",
+                    lineHeight: "18px",
+                    color: "var(--mini-table-body-text)",
+                  }}
+                >
+                  {product.quantity}
+                </td>
+                <td
+                  className="py-4 px-4"
+                  style={{
+                    fontWeight: 400,
+                    fontSize: "12px",
+                    lineHeight: "18px",
+                    color: "var(--mini-table-body-text)",
+                  }}
+                >
+                  ${product.amount.toFixed(2)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

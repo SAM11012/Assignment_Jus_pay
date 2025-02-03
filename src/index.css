@@ -1,6 +1,48 @@
 @import "tailwindcss";
-:root{
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #1c1c1c;
+  --sidebar-border: #f0f0f0;
+  --hover-bg: #f5f5f5;
+  --avatar-text-color: #1c1c1c;
+  --slider-subHeading-color: #1c1c1c66;
+  --slider-menu-item-color: #1a1a1a;
+  --conter-title-text: #1c1c1c;
+  --content-bg-color: #f7f9fb;
+  --notification-sub-text: #1c1c1c66;
+  --table-color-head: #1c1c1c66;
+  --ant-Inner: #d9d9d9;
+  --table-body-text: #1c1c1c;
+  --wavy-curve-primary: #a8c5da;
+  --wavy-curve-secondary: #a8c5da;
+  --mini-table-head-text: #1c1c1c66;
+  --mini-table-body-text: #1c1c1c;
+  --mini-table-header-border: #e5e7eb;
+  --input-placeholder-color:#1C1C1C33;
+  --slider-subHeading-n-color:#1C1C1C33;
+}
+.dark-mode {
+  --sidebar-bg: #1a1a1a;
+  --sidebar-text: #ffffff;
+  --sidebar-border: #333;
+  --hover-bg: #292929;
+  --avatar-text-color: #ffffff;
+  --slider-subHeading-color: #ffffff66;
+  --slider-menu-item-color: #ffffff;
+  --conter-title-text: #ffffff;
+  --content-bg-color: #ffffff0d;
+  --notification-sub-text: #ffffff66;
+  --table-color-head: #ffffff66;
+  --ant-Inner: #ffffff1a;
+  --table-body-text: #ffffff;
+  --wavy-curve-primary: #a8c5da;
+  --wavy-curve-secondary: #c6c7f8;
+  --mini-table-head-text: #ffffff66;
+  --mini-table-body-text: #ffffff;
+  --mini-table-header-border: #ffffff1a;
+  --input-placeholder-color:#FFFFFF33;
+  --slider-subHeading-n-color:#FFFFFF33;
 }
 /* :root {
   

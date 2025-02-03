@@ -1,0 +1,36 @@
+.custom-table .ant-table-thead > tr > th {
+    
+    border-right: none !important; /* Removes right border */
+    font-size: 12px !important; /* Larger font for header */
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: var(--table-color-head) !important;
+    border-bottom: 1px solid #1C1C1C33;
+    background-color: var(--sidebar-bg);
+  }
+  
+  .custom-table .ant-table-tbody > tr > td {
+    font-size: 12px !important; /* Larger font for header */
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: var(--table-body-text) !important;
+    border-bottom: 1px solid #1C1C1C0D;
+    background-color: var(--sidebar-bg);
+  }
+  
+  .custom-table .ant-table-tbody > tr:hover {
+    /* background: red !important; */
+  }
+  
+  .custom-table .ant-table-pagination {
+    text-align: right !important;
+  }
+  .ant-table-cell::before{
+    width: 0px !important;
+  }
+  .ant-table-cell-row-hover{
+    background-color: var(--sidebar-bg) !important;
+  }
+  .ant-checkbox-inner{
+    border: 1px solid var(--ant-Inner) !important;
+  }

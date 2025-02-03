@@ -1,21 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { Progress } from "antd";
+
 import { WorldMap } from "../../icons";
 import ProgressComponent from "./ProgressComponent";
-type Props = {};
 
+type Props = {};
+const GraphData: { name: string; progress: number }[] = [
+  { name: "New York", progress: 72 },
+  { name: "San Francisco", progress: 29 },
+  { name: "Sydney", progress: 25 },
+  { name: "Singapore", progress: 61 },
+];
 export default function GraphCard({}: Props) {
   return (
     <div
       style={{
-        backgroundColor: "#F7F9FB",
-        padding: "20px",
+        backgroundColor:'var(--content-bg-color)',
+        padding: "24px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
         borderRadius: "16px",
-        gap: "20px",
         width: "100%",
+         // Ensures full height usage
+        gap: "16px",
       }}
     >
       <span
@@ -23,28 +28,48 @@ export default function GraphCard({}: Props) {
           fontWeight: "600",
           fontSize: "14px",
           lineHeight: "20px",
-          textAlign: "center",
           width: "100%", // Ensures text aligns properly
+          color: "var(--conter-title-text)"
         }}
       >
         Revenue by Location
       </span>
-      <div>
-        <WorldMap />
-      </div>
 
-      <div>
-        {" "}
-        <StateBox />
+      {/* Content Wrapper for Equal Alignment */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          flex: 1,
+          gap: "16px",
+        }}
+      >
+        <div style={{ flex: 1 }}>
+          <WorldMap />
+        </div>
+        {GraphData.map((item: { name: string; progress: number }) => {
+          return (
+            <div style={{ flex: 1 }}>
+              <StateBox label={item.name} progress={item.progress} />
+            </div>
+          );
+        })}
+        
       </div>
     </div>
   );
 }
 
-const StateBox = () => {
+const StateBox = ({ label, progress }: { label: string; progress: number }) => {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <div style={{ display: "flex", flexDirection: "row" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
         <p
           style={{
             fontWeight: "400",
@@ -52,21 +77,23 @@ const StateBox = () => {
             lineHeight: "18px",
             padding: 0,
             margin: 0,
+            color: "var(--conter-title-text)"
           }}
         >
-          New York
+          {label}
         </p>
         <span
           style={{
             fontWeight: "400",
             fontSize: "12px",
             lineHeight: "18px",
+            color: "var(--conter-title-text)"
           }}
         >
-          72K
+          {progress}K
         </span>
       </div>
-      <ProgressComponent progress={73} />
+      <ProgressComponent targetProgress={progress} />
     </div>
   );
 };
