@@ -55,5 +55,21 @@ Make sure you have the following installed on your machine:
 - Refer to the `README` file in the repository (if available) for project-specific instructions.
 - To stop the development server, press `Ctrl + C` in the terminal.
 
+App Preview
 
+Screenshot 
+<img width="871" alt="Screenshot 2025-02-03 at 9 42 04 AM" src="https://github.com/user-attachments/assets/1e6da057-2f7f-468f-9ec4-cd6ca1c7779b" />
+
+Working Video - 
+https://res.cloudinary.com/daudgeu0r/video/upload/v1738556415/Assignment_Video_y7zdc8.mov
+
+Replace path-to-image.png with the path to the image and path-to-video.mp4 with the link to the video.
+
+Additional Notes
+
+If you encounter any issues during setup, ensure that your Node.js and npm versions are up to date.
+
+Refer to the README file in the repository (if available) for project-specific instructions.
+
+To stop the development server, press Ctrl + C in the terminal.
 
